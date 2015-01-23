@@ -5,5 +5,7 @@
 </head>
 <body>
         Hello <s:property value="userName" /> 
+        
+         <s:actionmessage />
 </body>
 </html>

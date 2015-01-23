@@ -7,7 +7,7 @@
 <h3>Struts 2 Hello World</h3>
 <s:form action="login">
         <s:textfield name="userName" label="Username" />
-        <s:submit value="Submit" />
+        <s:submit value="Submit" />      
 </s:form>
 </body>
 </html>

@@ -29,7 +29,11 @@ public class LoginAction3 extends ActionSupport
 	{
 		if (userName == null || userName.isEmpty())
 		{
-			addFieldError("userName", getText("username.required"));
+			addActionError("Username can't be blanked");
+			addFieldError("userName", "Username can't be blank");
+
+		} else {
+			addActionMessage("Welcome " + userName + ", You have been Successfully Logged in");
 		}
 	}
 }

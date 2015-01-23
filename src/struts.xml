@@ -3,11 +3,42 @@
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-<package name="default" extends="struts-default">
+<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+<package name="default" namespace="/" extends="struts-default">
         <action name="login" class="com.zeugor.action.LoginAction3">
-        	<result name="success">success.jsp</result>
-            <result name="error">error.jsp</result>
-         	<result name="input">error.jsp</result>
+        	<result name="success">/jsp/success.jsp</result>
+            <result name="error">/jsp/error.jsp</result>
+         	<result name="input">/jsp/login.jsp</result>
         </action>
+        
+	    <action name="*Number" method="{1}" class="com.zeugor.action.CalculatorAction">
+	        <result name="success">/jsp/curd.jsp</result>
+	    </action>        
+        
+        <!-- 
+        <action name="Number" class="com.zeugor.action.CalculatorAction">
+                <result name="success">/jsp/curd.jsp</result>
+        </action>
+        <action name="addNumber" method="add"
+                class="com.zeugor.action.CalculatorAction">
+                <result name="success">/jsp/curd.jsp</result>
+        </action>
+        <action name="multiplytNumber" method="multiply"
+                class="com.zeugor.action.CalculatorAction">
+                <result name="success">/jsp/curd.jsp</result>
+        </action>
+        <action name="subtractNumber" method="subtract"
+                class="com.zeugor.action.CalculatorAction">
+                <result name="success">/jsp/curd.jsp</result>
+        </action>
+                <action name="divideNumber" method="divide"
+                class="com.zeugor.action.CalculatorAction">
+                <result name="success">/jsp/curd.jsp</result>
+        </action>
+        -->
 </package>
+    
+    <include file="student.xml"/>
+	<include file="staff.xml"/>
 </struts>

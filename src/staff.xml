@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: struts_result.xml,v 1.5 2014-03-12 15:30:19 nperche Exp $ -->
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+        <package name="staff" namespace="/staff" extends="struts-default">
+                <action name="Student">
+                        <result>/jsp/staff.jsp</result>
+                </action>
+        </package>
+</struts>
